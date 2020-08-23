@@ -130,7 +130,7 @@ public class HbaseClient {
     public static void main(String[] args) throws Exception {
 //        HbaseClient.putData("con", "676_88_15978430591","log", "userid", "6761");
 //        String rowkey = "21067_474201_1362067200";
-        List<Map.Entry> ps = HbaseClient.getRow("rating", "460360_78373_1391443200");
+        List<Map.Entry> ps = HbaseClient.getRow("itemCFRecommend", "459600");
         for(Map.Entry p : ps) {
             System.out.println(p.getKey());
         }

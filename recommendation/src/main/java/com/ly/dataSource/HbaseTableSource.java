@@ -15,9 +15,9 @@ import java.util.Iterator;
 
 //bbsmax.com/A/obzbMwK3dE/
 public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Double>> {
-    private static HTable table;
+//    private static HTable table;
     private static Connection conn;
-    private static Scan scan;
+//    private static Scan scan;
     private static Admin admin;
     private String familyName = "log";
     private static Logger logger = LoggerFactory.getLogger(HbaseSource.class);
@@ -28,7 +28,7 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
 
     @Override
     protected Scan getScanner() {
-        return scan;
+        return this.scan;
     }
 
     @Override
@@ -38,19 +38,40 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
 
     @Override
     protected Tuple3<String, String, Double> mapResultToTuple(Result result) {
-        ResultScanner rs = null;
-        try {
-            rs = table.getScanner(scan);
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        byte[] userId = result.getValue(familyName.getBytes(), "userId".getBytes());
-        byte[] productId = result.getValue(familyName.getBytes(), "productId".getBytes());
-        byte[] score = result.getValue(familyName.getBytes(), "score".getBytes());
-        Tuple3<String, String, Double> tuple3 = new Tuple3<>();
+        byte[] userId = null;
+        byte[] productId = null;
+        byte[] score = null;
+        Tuple3<String, String, Double> tuple3 = null;
+       try {
+           userId = result.getValue(familyName.getBytes(), "userId".getBytes());
+           productId = result.getValue(familyName.getBytes(), "productId".getBytes());
+           score = result.getValue(familyName.getBytes(), "score".getBytes());
+       } catch (Exception e) {
+           e.printStackTrace();
+       }
+       Double s = 0.0;
+       try {
+           if(score != null)
+                s = Double.parseDouble(new String(score));
+       } catch (Exception e) {
+           System.out.println("===========================");
+           System.out.println(userId);
+           System.out.println(productId);
+           System.out.println(score);
+           System.out.println("===========================");
+           e.printStackTrace();
+       }
         if(userId != null && productId != null && score != null) {
-            tuple3.setFields(new String(userId), new String(productId), Double.parseDouble(new String(score)));
-            return tuple3;
+            try {
+                tuple3 = new Tuple3<>(new String(userId), new String(productId), s);
+            } catch (Exception e){
+                System.out.println("===========================");
+                System.out.println(userId);
+                System.out.println(productId);
+                System.out.println(score);
+                System.out.println("===========================");
+                e.printStackTrace();
+            }
         }
         return tuple3;
     }
@@ -59,11 +80,11 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
     public void configure(Configuration parameters) {
 
         try {
-            table = createTable();
+            this.table = createTable();
         } catch (IOException e) {
             e.printStackTrace();
         }
-        scan = new Scan();
+        this.scan = new Scan();
     }
     private HTable createTable() throws IOException {
         LOG.info("Initializing HBaseConfiguration");
@@ -74,28 +95,27 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
         conf.set("hbase.rpc.timeout", Property.getStrValue("hbase.rpc.timeout"));
         System.out.println(Property.getStrValue("hbase.rootdir"));
         conn = ConnectionFactory.createConnection(conf);
-        admin = conn.getAdmin();
         return new HTable(conf, this.getTableName());
     }
 
     @Override
     protected Tuple3<String, String, Double> mapResultToOutType(Result r) {
-        return super.mapResultToOutType(r);
+        return this.mapResultToTuple(r);
     }
 
-    @Override
-    public void close() throws IOException {
-        try {
-            if(table != null) {
-                table.close();
-            }
-            if(conn != null) {
-                conn.close();
-            }
-        } catch (IOException e) {
-            e.printStackTrace();
-            logger.error("Close hbase exception: ", e.toString());
-        }
-
-    }
+//    @Override
+//    public void close() throws IOException {
+//        try {
+//            if(this.table != null) {
+//                table.close();
+//            }
+//            if(this.conn != null) {
+//                conn.close();
+//            }
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//            logger.error("Close hbase exception: ", e.toString());
+//        }
+//
+//    }
 }

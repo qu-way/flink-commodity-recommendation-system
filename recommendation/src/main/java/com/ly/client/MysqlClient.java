@@ -2,6 +2,7 @@ package com.ly.client;
 
 import com.ly.entity.ProductEntity;
 import com.ly.entity.RatingEntity;
+import com.ly.entity.RecommendEntity;
 import com.ly.util.Property;
 
 import java.sql.*;

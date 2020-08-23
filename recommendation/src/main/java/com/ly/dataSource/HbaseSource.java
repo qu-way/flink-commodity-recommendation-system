@@ -69,6 +69,7 @@ public class HbaseSource extends RichSourceFunction<Tuple3<String, String, Doubl
             byte[] userId = result.getValue(familyName.getBytes(), "userId".getBytes());
             byte[] productId = result.getValue(familyName.getBytes(), "productId".getBytes());
             byte[] score = result.getValue(familyName.getBytes(), "score".getBytes());
+
             Tuple3<String, String, Double> tuple3 = new Tuple3<>();
             if(userId != null && productId != null && score != null) {
                 tuple3.setFields(new String(userId), new String(productId), Double.parseDouble(new String(score)));
