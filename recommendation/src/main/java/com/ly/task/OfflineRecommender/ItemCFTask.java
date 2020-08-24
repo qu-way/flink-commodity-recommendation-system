@@ -70,9 +70,13 @@ public class ItemCFTask {
     public static void calSimilarityUsingFlink() throws Exception {
         ExecutionEnvironment env = ExecutionEnvironment.getExecutionEnvironment();
         BatchTableEnvironment bbTableEnv = BatchTableEnvironment.create(env);
-//        DataStreamSource<Tuple3<String, String, Double>> dataStream =  env.addSource(new HbaseSource());
         // userId|productId|score
-        DataSet<Tuple3<String, String, Double>> dataSet =  env.createInput(new HbaseTableSource());
+        DataSet<Tuple3<String, String, Double>> dataSet =  env.createInput(new HbaseTableSource()).map(new MapFunction<Tuple4<String, String, Double, String>, Tuple3<String, String, Double>>() {
+            @Override
+            public Tuple3<String, String, Double> map(Tuple4<String, String, Double, String> s) throws Exception {
+                return new Tuple3<String, String, Double>(s.f0, s.f1, s.f2);
+            }
+        });
         // userId|productId|score|count
         DataSet<Tuple4<String, String, Double, Integer>> productCount = dataSet.flatMap(new FlatMapFunction<Tuple3<String, String, Double>, Tuple4<String, String, Double, Integer>>() {
             @Override

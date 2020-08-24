@@ -27,4 +27,12 @@ public class RecommendEntity {
         this.productId = productId;
         this.sim = sim;
     }
+
+    @Override
+    public String toString() {
+        return "RecommendEntity{" +
+                "productId='" + productId + '\'' +
+                ", sim=" + sim +
+                '}';
+    }
 }

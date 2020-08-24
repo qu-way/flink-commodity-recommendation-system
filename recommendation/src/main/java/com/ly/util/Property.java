@@ -19,7 +19,7 @@ public class Property {
             System.err.println(">>>flink-2-hbase<<<资源文件加载失败!");
             e.printStackTrace();
         }
-        System.out.println(">>>flink-2-hbase<<<资源文件加载成功");
+//        System.out.println(">>>flink-2-hbase<<<资源文件加载成功");
     }
 
     public static String getStrValue(String key) {

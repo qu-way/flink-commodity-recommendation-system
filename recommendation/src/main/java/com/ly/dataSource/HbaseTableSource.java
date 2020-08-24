@@ -2,23 +2,18 @@ package com.ly.dataSource;
 
 import com.ly.util.Property;
 import org.apache.flink.addons.hbase.TableInputFormat;
-import org.apache.flink.api.java.tuple.Tuple3;
+import org.apache.flink.api.java.tuple.Tuple4;
 import org.apache.flink.configuration.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
-import org.apache.hadoop.hbase.TableName;
 import org.apache.hadoop.hbase.client.*;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
-import java.util.Iterator;
 
 //bbsmax.com/A/obzbMwK3dE/
-public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Double>> {
-//    private static HTable table;
+public class HbaseTableSource extends TableInputFormat<Tuple4<String, String, Double, String>> {
     private static Connection conn;
-//    private static Scan scan;
-    private static Admin admin;
     private String familyName = "log";
     private static Logger logger = LoggerFactory.getLogger(HbaseSource.class);
 
@@ -37,15 +32,17 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
     }
 
     @Override
-    protected Tuple3<String, String, Double> mapResultToTuple(Result result) {
+    protected Tuple4<String, String, Double, String> mapResultToTuple(Result result) {
         byte[] userId = null;
         byte[] productId = null;
         byte[] score = null;
-        Tuple3<String, String, Double> tuple3 = null;
+        byte[] timestamp = null;
+        Tuple4<String, String, Double, String> tuple4 = null;
        try {
            userId = result.getValue(familyName.getBytes(), "userId".getBytes());
            productId = result.getValue(familyName.getBytes(), "productId".getBytes());
            score = result.getValue(familyName.getBytes(), "score".getBytes());
+           timestamp = result.getValue(familyName.getBytes(), "timestamp".getBytes());
        } catch (Exception e) {
            e.printStackTrace();
        }
@@ -58,12 +55,13 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
            System.out.println(userId);
            System.out.println(productId);
            System.out.println(score);
+           System.out.println(timestamp);
            System.out.println("===========================");
            e.printStackTrace();
        }
-        if(userId != null && productId != null && score != null) {
+        if(userId != null && productId != null && score != null && timestamp != null) {
             try {
-                tuple3 = new Tuple3<>(new String(userId), new String(productId), s);
+                tuple4 = new Tuple4<String, String, Double, String>(new String(userId), new String(productId), s, new String(timestamp));
             } catch (Exception e){
                 System.out.println("===========================");
                 System.out.println(userId);
@@ -73,12 +71,11 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
                 e.printStackTrace();
             }
         }
-        return tuple3;
+        return tuple4;
     }
 
     @Override
     public void configure(Configuration parameters) {
-
         try {
             this.table = createTable();
         } catch (IOException e) {
@@ -99,23 +96,8 @@ public class HbaseTableSource extends TableInputFormat<Tuple3<String, String, Do
     }
 
     @Override
-    protected Tuple3<String, String, Double> mapResultToOutType(Result r) {
+    protected Tuple4<String, String, Double, String> mapResultToOutType(Result r) {
         return this.mapResultToTuple(r);
     }
 
-//    @Override
-//    public void close() throws IOException {
-//        try {
-//            if(this.table != null) {
-//                table.close();
-//            }
-//            if(this.conn != null) {
-//                conn.close();
-//            }
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//            logger.error("Close hbase exception: ", e.toString());
-//        }
-//
-//    }
 }
