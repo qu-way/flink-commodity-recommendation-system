@@ -133,11 +133,26 @@ public class HbaseClient {
 //        HbaseClient.putData("con", "676_88_15978430591","log", "userid", "6761");
 //        String rowkey = "21067_474201_1362067200";
 //        List<Map.Entry> ps = HbaseClient.getRow("rating", "474201_26699_1392912000");
-        List<Map.Entry> ps = HbaseClient.getRow("historyHotProducts", "1");
-        for(Map.Entry p : ps) {
-            System.out.println(p.getKey());
+//        List<Map.Entry> ps = HbaseClient.getRow("historyHotProducts", "1");
+//        for(Map.Entry p : ps) {
+//            System.out.println(p.getKey());
+//        }
+//        List<String> res = getAllKey("itemCFRecommend");
+        List<String> res = getAllKey("goodProducts");
+
+        System.out.println("itemCFRecommend -> products = " + res.size());
+        for(String str : res) {
+            System.out.println(str);
         }
-//        getAllKey("rating");
+
+        String rowkey = "90897";
+        List<Map.Entry> ps = HbaseClient.getRow("goodProducts", rowkey);
+        // 65 * 21
+        System.out.println("共有： " + ps.size());
+        System.out.println( ps.get(0).getValue());
+//        for(Map.Entry p : ps) {
+//            System.out.println("name: " + p.getKey() + "  value: " + p.getValue());
+//        }
     }
 
 

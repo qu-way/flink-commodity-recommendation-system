@@ -1,6 +1,6 @@
 package com.ly.sink;
 
-import com.ly.dataSource.HbaseSource;
+import com.ly.client.HbaseClient;
 import com.ly.util.Property;
 import org.apache.flink.api.common.io.OutputFormat;
 import org.apache.flink.api.java.tuple.Tuple2;
@@ -54,13 +54,11 @@ public class HbaseSink implements OutputFormat<Object> {
     public void writeRecord(Object o) throws IOException {
         if(tableName.equals("historyHotProducts")) {
             Tuple2<String, Long> s = (Tuple2<String, Long>) o;
-            Put put = new Put(String.valueOf(rowKey).getBytes());
-            String value1 = s.f0;
-            String value2 = String.valueOf(s.f1);
-            put.addColumn(familyName.getBytes(), "productId".getBytes(), value1.getBytes());
-            put.addColumn(familyName.getBytes(), "count".getBytes(), value2.getBytes());
+            String rowKey = String.valueOf(s.f0);
+            Put put = new Put(rowKey.getBytes());
+            String count = String.valueOf(s.f1);
+            put.addColumn(familyName.getBytes(), "count".getBytes(), count.getBytes());
             table.put(put);
-            rowKey++;
         } else if(tableName.equals("recentHotProducts")) {
             Tuple3<String, Long, String> s = (Tuple3<String, Long, String>) o;
             String key = s.f2;
@@ -72,13 +70,11 @@ public class HbaseSink implements OutputFormat<Object> {
             table.put(put);
         } else if(tableName.equals("goodProducts")) {
             Tuple2<String, Double> s = (Tuple2<String, Double>) o;
-            Put put = new Put(String.valueOf(rowKey).getBytes());
-            String value1 = s.f0;
-            String value2 = String.valueOf(s.f1);
-            put.addColumn(familyName.getBytes(), "productId".getBytes(), value1.getBytes());
-            put.addColumn(familyName.getBytes(), "count".getBytes(), value2.getBytes());
+            String rowKey = String.valueOf(s.f0);
+            Put put = new Put(rowKey.getBytes());
+            String count = String.valueOf(s.f1);
+            put.addColumn(familyName.getBytes(), "count".getBytes(), count.getBytes());
             table.put(put);
-            rowKey++;
         }
     }
 

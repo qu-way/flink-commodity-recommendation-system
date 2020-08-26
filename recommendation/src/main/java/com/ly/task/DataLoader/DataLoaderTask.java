@@ -21,16 +21,16 @@ public class DataLoaderTask {
         * includeFields(true,false,true)表示不需要第二列
         * pojoType(ProductEntity.class, "productId", "name", "imageUrl", "categories", "tags")ProductEntity，使用后面这5个属性
         * */
-        DataSet<ProductEntity> source= env.readCsvFile(productFilePath)
-                .fieldDelimiter("^")
-                .includeFields("1100111")
-                .pojoType(ProductEntity.class, "productId", "name", "imageUrl", "categories", "tags")
-                .map(new DataLoaderMapFunction());
+//        DataSet<ProductEntity> source= env.readCsvFile(productFilePath)
+//                .fieldDelimiter("^")
+//                .includeFields("1100111")
+//                .pojoType(ProductEntity.class, "productId", "name", "imageUrl", "categories", "tags")
+//                .map(new DataLoaderMapFunction());
         DataSet<RatingEntity> source2 = env.readCsvFile(ratingFilePath)
                 .fieldDelimiter(",")
                 .pojoType(RatingEntity.class, "userId", "productId", "score", "timestamp")
                 .map(new DataToHbaseMapFunction());
-        source.print();
+//        source.print();
         source2.print();
         env.execute("Load Data");
     }

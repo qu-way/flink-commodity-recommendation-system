@@ -1,18 +1,16 @@
 package com.ly.task.OfflineRecommender;
 
-import com.ly.dataSource.HbaseTableSource;
 import com.ly.util.Property;
-import com.sun.org.apache.bcel.internal.generic.BasicType;
 import org.apache.flink.api.common.functions.MapFunction;
 import org.apache.flink.api.common.typeinfo.BasicTypeInfo;
 import org.apache.flink.api.common.typeinfo.TypeInformation;
-import org.apache.flink.api.common.typeinfo.Types;
 import org.apache.flink.api.java.DataSet;
 import org.apache.flink.api.java.ExecutionEnvironment;
 import org.apache.flink.api.java.io.jdbc.JDBCInputFormat;
-import org.apache.flink.api.java.tuple.Tuple3;
 import org.apache.flink.api.java.typeutils.RowTypeInfo;
-
+import org.apache.flink.types.Row;
+import org.apache.flink.util.StringValueUtils;
+import scala.Tuple3;
 
 
 public class ContentRecommender {
@@ -22,27 +20,27 @@ public class ContentRecommender {
         TypeInformation[] fieldTypes = new TypeInformation[] {
                 BasicTypeInfo.INT_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO
         };
-        RowTypeInfo rowTypeInfo = new RowTypeInfo(fieldTypes);
+        RowTypeInfo rowTypeInfo = new RowTypeInfo(BasicTypeInfo.INT_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO, BasicTypeInfo.STRING_TYPE_INFO);
         JDBCInputFormat jdbcInputFormat = JDBCInputFormat.buildJDBCInputFormat()
-                .setDrivername(Property.getStrValue("mysql.driver"))
-                .setDBUrl(Property.getStrValue("mysql.url"))
-                .setUsername(Property.getStrValue("mysql.username"))
-                .setPassword(Property.getStrValue("mysql.password"))
+                .setDrivername(new String(Property.getStrValue("mysql.driver")))
+                .setDBUrl(new String(Property.getStrValue("mysql.url")))
+                .setUsername(new String(Property.getStrValue("mysql.username")))
+                .setPassword(new String(Property.getStrValue("mysql.password")))
                 .setQuery("select productId, name, tags from product")
                 .setRowTypeInfo(rowTypeInfo)
                 .finish();
-        DataSet<Tuple3<Integer, String, String>> dataSet = env.createInput(jdbcInputFormat);
-        System.out.println("hello");
-        dataSet.print();
-//        dataSet.map(new MapFunction<Row, Tuple3<Integer, String, String>>() {
-//            @Override
-//            public Tuple3<Integer, String, String> map(Row row) throws Exception {
-//                row.
-//            }
-//        })
+        DataSet dataSet = env.createInput(jdbcInputFormat, rowTypeInfo);
+        dataSet.map(new MapFunction<Row, Row>() {
+            @Override
+            public Row map(Row r) throws Exception {
+                String s = r.getField(2).toString().replace("|", " ");
+                return  Row.of(r.getField(0), r.getField(1), s);
+            }
+        }).print();
+        // TODO 计算 tf-idf
         env.execute();
     }
-    public static void main(String[] args) {
-
+    public static void main(String[] args) throws Exception {
+        contentRecommend();
     }
 }

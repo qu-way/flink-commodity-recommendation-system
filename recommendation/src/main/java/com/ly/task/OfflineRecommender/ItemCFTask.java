@@ -116,15 +116,7 @@ public class ItemCFTask {
                 return new RecommendReduceEntity(s.f0, tmp);
             }
         }).groupBy("productId").reduce(new ReduceRecommend()).map(new RecommendEntityMapFunction());
-
         newRow.print();
-//        table3.;
-//        EnvironmentSettings esettings = EnvironmentSettings.newInstance().useBlinkPlanner().inStreamingMode().build();
-//        BatchTableEnvironment tenv = BatchTableEnvironment.create(env);
-//        Table  table1 = tenv.crea;
-//        tenv.to
-//        dataStream.print();
-//        bbTableEnv.execute("nice");
         env.execute();
 
 

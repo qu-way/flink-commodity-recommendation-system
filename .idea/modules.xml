@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/FlinkCommodityRecommendationSystem.iml" filepath="$PROJECT_DIR$/.idea/FlinkCommodityRecommendationSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/recommend_backend/recommend_backend.iml" filepath="$PROJECT_DIR$/recommend_backend/recommend_backend.iml" />
       <module fileurl="file://$PROJECT_DIR$/recommendation/recommendation.iml" filepath="$PROJECT_DIR$/recommendation/recommendation.iml" />
     </modules>
   </component>
