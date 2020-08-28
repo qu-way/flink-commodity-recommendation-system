@@ -2,45 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd1df7d9-a7d5-4a39-8b41-08e1f12b3b46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_boot_spring_boot_starter_security_1_5_13_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_config_4_2_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_core_4_2_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_springframework_security_spring_security_web_4_2_6_RELEASE.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/dao/UserInterface.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/entity/User.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/service/UserService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/3d79f707-de64-4017-8588-bd2e403b019f.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/3d79f707-de64-4017-8588-bd2e403b019f.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/RecommendBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/RecommendBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/controller/UserController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/controller/UserController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/dao/ProductInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/dao/ProductInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/entity/Product.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/entity/ProductEntity.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/entity/ProductEntity.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/service/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/service/RecommendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/HbaseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/HbaseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/UDFKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/UDFKafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/resources/application.properties" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/client/HbaseClient.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/client/HbaseClient.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/DataToHbaseMapFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/DataToHbaseMapFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/OnlineRecommendMapFunction.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/OnlineRecommendMapFunction.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/TopNProductTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/TopNProductTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/util/HotProducts.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/util/HotProducts.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/client/HbaseClient.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/client/HbaseClient.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/DataToHbaseMapFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/DataToHbaseMapFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction$2.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction$2.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction$3.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction$3.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/map/OnlineRecommendMapFunction.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/task/OnlineRecommender/TopNProductTask.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/task/OnlineRecommender/TopNProductTask.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/util/HotProducts$1.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/util/HotProducts$1.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/com/ly/util/HotProducts.class" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/com/ly/util/HotProducts.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/target/classes/mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/target/classes/mysql.sql" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/Recs 架构.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/主页.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/商品详情.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/登录.png" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/recommendation/target/" />
     <ignored path="$PROJECT_DIR$/recommend_backend/target/" />
@@ -104,14 +70,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="312">
-                <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+              <first_editor relative-caret-position="260">
+                <caret line="10" selection-start-line="10" selection-end-line="10" />
               </first_editor>
               <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="338">
+              <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/OnlineRecommendMapFunction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="104">
+              <caret line="32" column="45" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="45" />
             </state>
           </provider>
         </entry>
@@ -274,6 +258,97 @@
               <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
               <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
               <item name="images" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend_backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend_backend" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="recommend_backend" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ly" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ly" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
+              <item name="FlinkCommodityRecommendationSystem" type="462c0819:PsiDirectoryNode" />
+              <item name="recommendation" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="ly" type="462c0819:PsiDirectoryNode" />
+              <item name="task" type="462c0819:PsiDirectoryNode" />
+              <item name="OnlineRecommender" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="FlinkCommodityRecommendationSystem" type="b2602c69:ProjectViewProjectNode" />
@@ -458,12 +533,12 @@
       <workItem from="1598509345397" duration="5568000" />
       <workItem from="1598540725118" duration="2820000" />
       <workItem from="1598580642966" duration="12840000" />
-      <workItem from="1598599019227" duration="5400000" />
+      <workItem from="1598599019227" duration="6128000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="213246000" />
+    <option name="totallyTimeSpent" value="213974000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -494,7 +569,7 @@
       <window_info anchor="bottom" id="Inspection" order="7" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="8" weight="0.32978722" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="10" />
+      <window_info anchor="bottom" id="Version Control" order="10" visible="true" weight="0.32978722" />
       <window_info anchor="bottom" id="Database Changes" order="11" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.36266926" />
       <window_info anchor="bottom" id="Event Log" order="13" side_tool="true" />
@@ -827,13 +902,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="338">
-          <caret line="20" column="37" selection-start-line="20" selection-start-column="37" selection-end-line="20" selection-end-column="37" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/DataToHbaseMapFunction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="234">
@@ -845,13 +913,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="130">
           <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/OnlineRecommendMapFunction.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="372">
-          <caret line="135" column="37" selection-start-line="135" selection-start-column="24" selection-end-line="135" selection-end-column="37" />
         </state>
       </provider>
     </entry>
@@ -994,10 +1055,24 @@
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="312">
-            <caret line="12" lean-forward="true" selection-start-line="12" selection-end-line="12" />
+          <first_editor relative-caret-position="260">
+            <caret line="10" selection-start-line="10" selection-end-line="10" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="338">
+          <caret line="20" column="34" selection-start-line="20" selection-start-column="34" selection-end-line="20" selection-end-column="34" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/map/OnlineRecommendMapFunction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="104">
+          <caret line="32" column="45" selection-start-line="32" selection-start-column="31" selection-end-line="32" selection-end-column="45" />
         </state>
       </provider>
     </entry>
