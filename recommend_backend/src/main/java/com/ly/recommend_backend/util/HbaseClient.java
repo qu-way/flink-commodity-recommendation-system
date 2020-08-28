@@ -1,8 +1,5 @@
-package com.ly.recommend_backend.entity;
+package com.ly.recommend_backend.util;
 
-
-
-import com.ly.recommend_backend.util.Property;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;

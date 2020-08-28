@@ -25,17 +25,22 @@ public class OnlineRecommendMapFunction implements MapFunction<String, String> {
         String productId = r[1];
         String score = r[2];
         String timestamp = r[3];
+        System.out.println("userId: " + userId + "\tproductId: " + productId);
+        HbaseClient.increamColumn("userProduct", userId, "product", productId);
 
         // 1.先从 redis 查询热点数据：用户历史/最近评分列表， 再插入数据
         Jedis jedis  = RedisClient.jedis;
-        List<String> userHistoryRatingList = jedis.lrange(userId, 0, -1);
+        String REDIS_PREFIX = "ONLINE_PREFIX_";
+        jedis.rpush(REDIS_PREFIX + userId, productId + ":" + score);
+        List<String> userHistoryRatingList = jedis.lrange(REDIS_PREFIX + userId, 0, -1);
         // 将评分列表转换成 RecommendEntity set，sim 和 score 是相同数据类型，所以这里直接使用 RecommendEntity
         HashSet<RecommendEntity> recentRatingSet = new HashSet<>(userHistoryRatingList.size());
         for(String str : userHistoryRatingList) {
             String[] tmp = str.split(":");
-           recentRatingSet.add(new RecommendEntity(tmp[0], Double.parseDouble(tmp[1])));
+            RecommendEntity recommendEntity = new RecommendEntity(tmp[0], Double.parseDouble(tmp[1]));
+            System.out.println("近期评分：\t" + recommendEntity);
+            recentRatingSet.add(recommendEntity);
         }
-        jedis.rpush(userId, productId + ":" + score);
 
         // 2. 从 hbase 中获取当前产品的相似度列表
         // table：itemCFRecommend  familyName: p rowKey: productId
@@ -43,31 +48,37 @@ public class OnlineRecommendMapFunction implements MapFunction<String, String> {
         // 转换成 dataset 使用
         HashSet<RecommendEntity> recommendEntitySet = new HashSet<>();
         for(Map.Entry<String, Double> entry : entryList) {
-            recommendEntitySet.add(new RecommendEntity(entry.getKey(), entry.getValue()));
+            RecommendEntity recommendEntity = new RecommendEntity(entry.getKey(), entry.getValue());
+            recommendEntitySet.add(recommendEntity);
+            System.out.println(recommendEntity);
         }
         DataSet<RecommendEntity> dataSet = env.fromCollection(recommendEntitySet);
 
         // 3.从 hbase 中获取用户评论过的产品列表，用于过滤推荐结果
         List<Map.Entry> ratedProductList = HbaseClient.getRow("userProduct", userId);
-        HashSet<String> historyRatingSet = new HashSet<>();
         List<String> recommendCandidateList = new ArrayList<>();
-        for(Map.Entry<String, Double> entry : ratedProductList) {
-            historyRatingSet.add(entry.getKey());
+        if(ratedProductList != null) {
+            HashSet<String> historyRatingSet = new HashSet<>();
+            for(Map.Entry<String, Double> entry : ratedProductList) {
+                System.out.println("已经评分商品：" + entry.getKey());
+                historyRatingSet.add(entry.getKey());
+            }
+
+            recommendCandidateList = dataSet.filter(new FilterFunction<RecommendEntity>() {
+                @Override
+                public boolean filter(RecommendEntity recommendEntity) throws Exception {
+                    return !historyRatingSet.contains(recommendEntity.getProductId());
+                }
+            }).sortPartition("sim", Order.DESCENDING)
+                    .first(10)
+                    .map(new MapFunction<RecommendEntity, String>() {
+                        @Override
+                        public String map(RecommendEntity recommendEntity) throws Exception {
+                            return recommendEntity.getProductId();
+                        }
+                    }).collect();
         }
 
-        recommendCandidateList = dataSet.filter(new FilterFunction<RecommendEntity>() {
-            @Override
-            public boolean filter(RecommendEntity recommendEntity) throws Exception {
-                return !historyRatingSet.contains(recommendEntity.getProductId());
-            }
-        }).sortPartition("sim", Order.DESCENDING)
-                .first(10)
-                .map(new MapFunction<RecommendEntity, String>() {
-            @Override
-            public String map(RecommendEntity recommendEntity) throws Exception {
-                return recommendEntity.getProductId();
-            }
-        }).collect();
 
         if(recentRatingSet.size() == 0) {
             StringBuilder sb = new StringBuilder();
@@ -91,7 +102,8 @@ public class OnlineRecommendMapFunction implements MapFunction<String, String> {
             int sum = 0;
             for(RecommendEntity recent : recentRatingSet) {
                 Double sim = getSim(candidate, recent.getProductId());
-                if(sim > 0.4) {
+//                sim > 0.4
+                if(true) {
                     sum += recent.getSim() * sim;
                     if(recent.getSim() > 3.0) {
                         incre += 1;
@@ -119,10 +131,11 @@ public class OnlineRecommendMapFunction implements MapFunction<String, String> {
         sb.append("===================\n推荐结果{userId: }")
                 .append(userId)
                 .append("\n")
-                .append("productList: ");
+                .append("productList:\n");
         for(Map.Entry<String, Double> entry : reMapEntryList) {
             HbaseClient.increamColumn("onlineRecommend", userId, "p", entry.getKey());
-            sb.append(entry.getKey()).append("\t");
+            sb.append("productId: ").append(entry.getKey()).append("\t")
+            .append("score: ").append(entry.getValue()).append("\n");
         }
         sb.append("\n");
         return sb.toString();

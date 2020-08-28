@@ -1,6 +1,7 @@
 package com.ly.client;
 
 import com.ly.util.Property;
+import org.apache.flink.table.expressions.In;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.*;
 import org.apache.hadoop.hbase.client.*;
@@ -138,21 +139,24 @@ public class HbaseClient {
 //            System.out.println(p.getKey());
 //        }
 //        List<String> res = getAllKey("itemCFRecommend");
-        List<String> res = getAllKey("goodProducts");
+//        List<String> res = getAllKey("goodProducts");
+//
+//        System.out.println("itemCFRecommend -> products = " + res.size());
+//        for(String str : res) {
+//            System.out.println(str);
+//        }
 
-        System.out.println("itemCFRecommend -> products = " + res.size());
-        for(String str : res) {
-            System.out.println(str);
-        }
-
-        String rowkey = "90897";
-        List<Map.Entry> ps = HbaseClient.getRow("goodProducts", rowkey);
+        String rowkey = "0";
+        List<Map.Entry> ps = HbaseClient.getRow("onlineHot", rowkey);
         // 65 * 21
         System.out.println("共有： " + ps.size());
         System.out.println( ps.get(0).getValue());
-//        for(Map.Entry p : ps) {
-//            System.out.println("name: " + p.getKey() + "  value: " + p.getValue());
-//        }
+        for(Map.Entry p : ps) {
+            System.out.println("productId: " + p.getKey() + "  value: " + p.getValue());
+        }
+//        String str = "4477.0";
+//        Double tmp = Double.parseDouble(str);
+//        System.out.println((int)(double) tmp);
     }
 
 

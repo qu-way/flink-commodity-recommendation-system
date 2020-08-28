@@ -32,4 +32,16 @@ CREATE TABLE `rating`  (
 ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 
+-- ----------------------------
+-- Table Structure for user
+-- ----------------------------
+DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`  (
+   `id` int(11) NOT NULL AUTO_INCREMENT,
+   `name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+   `password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL,
+   `timestamp` long NOT NULL,
+   PRIMARY KEY (`id`) USING BTREE,
+   INDEX indexId (`id`)
+) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 SET FOREIGN_KEY_CHECKS = 1;

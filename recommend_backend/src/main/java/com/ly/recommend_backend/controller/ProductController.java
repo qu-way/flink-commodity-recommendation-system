@@ -1,15 +1,14 @@
 package com.ly.recommend_backend.controller;
 
 
-import com.ly.recommend_backend.entity.Product;
 import com.ly.recommend_backend.entity.ProductEntity;
-import com.ly.recommend_backend.entity.RecommendEntity;
+import com.ly.recommend_backend.entity.User;
 import com.ly.recommend_backend.service.RecommendService;
+import com.ly.recommend_backend.service.UserService;
 import com.ly.recommend_backend.util.UDFKafkaProducer;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.ui.Model;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.*;
 
@@ -17,13 +16,16 @@ import java.io.IOException;
 import java.util.List;
 
 @RestController
-@RequestMapping("/business/product")
+@RequestMapping("/product")
 public class ProductController {
     private Logger logger = LoggerFactory.getLogger(this.getClass());
     //hbase table name
     private String HISTORY_HOT_PRODCUTS = "historyHotProducts";
     private String GOOD_PRODUCTS = "goodProducts";
     private String ITEM_CF_RECOMMEND = "itemCFRecommend";
+    private String ONLINE_RECOMMEND = "onlineRecommend";
+    private String ONLINE_HOT = "onlineHot";
+    private Integer ONLINE_HOT_NUMS = 10;
 
     @Autowired
     private RecommendService recommendService;
@@ -171,13 +173,40 @@ public class ProductController {
 
 
     /**
-     * 实时推荐
+     * 实时用户个性化推荐
      * */
 
+    @RequestMapping(value="/stream", produces = "application/json", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelMap onlineRecs(@RequestParam("userId") String userId) {
+        ModelMap model = new ModelMap();
+        try {
+            List<ProductEntity> res = recommendService.getOnlineRecs(userId, ONLINE_RECOMMEND);
+            model.addAttribute("success", true);
+            model.addAttribute("products", res);
+        } catch (Exception e) {
+            model.addAttribute("success", false);
+            model.addAttribute("msg", "查询失败");
+        }
+        return model;
+    }
 
+    /**
+     * 实时热门推荐
+     * */
 
-
-
-
-
+    @RequestMapping(value = "/onlinehot", produces = "application/json", method = RequestMethod.GET)
+    @ResponseBody
+    public ModelMap onlineHot() {
+        ModelMap model = new ModelMap();
+        try {
+            List<ProductEntity> res = recommendService.getOnlineHot(ONLINE_HOT, ONLINE_HOT_NUMS);
+            model.addAttribute("success", true);
+            model.addAttribute("products", res);
+        } catch (Exception e) {
+            model.addAttribute("success", false);
+            model.addAttribute("msg", e.getMessage());
+        }
+        return model;
+    }
 }

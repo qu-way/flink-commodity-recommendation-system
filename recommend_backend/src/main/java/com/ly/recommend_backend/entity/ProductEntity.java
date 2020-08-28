@@ -37,6 +37,7 @@ public class ProductEntity {
         this.tags = tags;
     }
 
+
     public double getScore() {
         return score;
     }

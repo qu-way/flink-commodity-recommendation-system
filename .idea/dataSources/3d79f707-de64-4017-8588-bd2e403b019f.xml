@@ -23931,121 +23931,127 @@ VARIABLE_NAME</ColNames>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="4341" parent="646" name="indexProductId">
+    <column id="4341" parent="646" name="score">
+      <Position>7</Position>
+      <DataType>double|0s</DataType>
+      <NotNull>1</NotNull>
+      <ColumnKind>normal</ColumnKind>
+    </column>
+    <index id="4342" parent="646" name="indexProductId">
       <ColNames>productId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="4342" parent="646" name="PRIMARY">
+    <key id="4343" parent="646" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="4343" parent="647" name="id">
+    <column id="4344" parent="647" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4344" parent="647" name="categories">
+    <column id="4345" parent="647" name="categories">
       <Position>2</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4345" parent="647" name="imageurl">
+    <column id="4346" parent="647" name="imageurl">
       <Position>3</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4346" parent="647" name="name">
+    <column id="4347" parent="647" name="name">
       <Position>4</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4347" parent="647" name="productid">
+    <column id="4348" parent="647" name="productid">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4348" parent="647" name="tags">
+    <column id="4349" parent="647" name="tags">
       <Position>6</Position>
       <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <key id="4349" parent="647" name="PRIMARY">
+    <key id="4350" parent="647" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="4350" parent="648" name="id">
+    <column id="4351" parent="648" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4351" parent="648" name="userId">
+    <column id="4352" parent="648" name="userId">
       <Position>2</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4352" parent="648" name="productId">
+    <column id="4353" parent="648" name="productId">
       <Position>3</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4353" parent="648" name="score">
+    <column id="4354" parent="648" name="score">
       <Position>4</Position>
       <DataType>decimal(5,1 digit)|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4354" parent="648" name="timestamp">
+    <column id="4355" parent="648" name="timestamp">
       <Position>5</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <index id="4355" parent="648" name="indexUserId">
+    <index id="4356" parent="648" name="indexUserId">
       <ColNames>userId</ColNames>
       <Type>btree</Type>
     </index>
-    <key id="4356" parent="648" name="PRIMARY">
+    <key id="4357" parent="648" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
-    <column id="4357" parent="649" name="user_id">
+    <column id="4358" parent="649" name="id">
       <Position>1</Position>
       <DataType>int|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4358" parent="649" name="username">
+    <column id="4359" parent="649" name="name">
       <Position>2</Position>
-      <DataType>varchar(20)|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4359" parent="649" name="sex">
+    <column id="4360" parent="649" name="password">
       <Position>3</Position>
-      <DataType>int|0s</DataType>
+      <DataType>varchar(255)|0s</DataType>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4360" parent="649" name="age">
+    <column id="4361" parent="649" name="timestamp">
       <Position>4</Position>
-      <DataType>int|0s</DataType>
+      <DataType>mediumtext|0s</DataType>
+      <NotNull>1</NotNull>
       <ColumnKind>normal</ColumnKind>
     </column>
-    <column id="4361" parent="649" name="registertime">
-      <Position>5</Position>
-      <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
-    </column>
-    <key id="4362" parent="649" name="PRIMARY">
+    <index id="4362" parent="649" name="indexId">
+      <ColNames>id</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="4363" parent="649" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
-      <ColNames>user_id</ColNames>
+      <ColNames>id</ColNames>
       <Primary>1</Primary>
     </key>
   </database-model>

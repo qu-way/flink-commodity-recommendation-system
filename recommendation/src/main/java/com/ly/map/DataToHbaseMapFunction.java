@@ -15,9 +15,9 @@ public class DataToHbaseMapFunction implements MapFunction<RatingEntity, RatingE
             HbaseClient.putData("rating", rowkey, "log", "score", String.valueOf(ratingEntity.getScore()));
             HbaseClient.putData("rating", rowkey, "log", "timestamp", String.valueOf(ratingEntity.getTimestamp()));
             // record user-product info
-//            HbaseClient.increamColumn("userProduct", String.valueOf(ratingEntity.getUserId()), "product", String.valueOf(ratingEntity.getProductId()));
+            HbaseClient.increamColumn("userProduct", String.valueOf(ratingEntity.getUserId()), "product", String.valueOf(ratingEntity.getProductId()));
             // record product-user info
-//            HbaseClient.increamColumn("productUser", String.valueOf(ratingEntity.getProductId()), "user", String.valueOf(ratingEntity.getUserId()));
+            HbaseClient.increamColumn("productUser", String.valueOf(ratingEntity.getProductId()), "user", String.valueOf(ratingEntity.getUserId()));
         }
         return ratingEntity;
     }

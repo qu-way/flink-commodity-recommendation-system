@@ -1,5 +1,6 @@
 package com.ly.util;
 
+import com.ly.client.HbaseClient;
 import com.ly.entity.TopEntity;
 import com.sun.jmx.snmp.Timestamp;
 import org.apache.flink.api.common.state.ListState;
@@ -54,12 +55,16 @@ public class HotProducts extends KeyedProcessFunction<Tuple, TopEntity, String> 
         sb.append("===============\n");
         sb.append("时间:\t").append(new Timestamp(timestamp-1)).append("\n");
        try {
-           for(int i = 0; i < topSize; i++) {
+           for(int i = 0; i < topSize && i < allProduct.size(); i++) {
                TopEntity topEntity = allProduct.get(i);
                sb.append("No").append(i).append(":")
                        .append("商品ID=").append(topEntity.getProductId())
                        .append(" 点击量").append(topEntity.getActionTimes())
                        .append("\n");
+               HbaseClient.putData("onlineHot", String.valueOf(i), "p"
+                       , "productId", String.valueOf(topEntity.getProductId()) );
+               HbaseClient.putData("onlineHot", String.valueOf(i), "p"
+                       , "count", String.valueOf(topEntity.getActionTimes()));
            }
        } catch (Exception e) {
            e.printStackTrace();

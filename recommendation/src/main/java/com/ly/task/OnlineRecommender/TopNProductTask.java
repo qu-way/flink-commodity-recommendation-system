@@ -20,7 +20,7 @@ import org.apache.flink.streaming.connectors.redis.common.config.FlinkJedisPoolC
 import java.util.Properties;
 
 public class TopNProductTask {
-    private static final int topCount = 5;
+    private static final int topCount = 10;
 
     public static void main(String[] args) throws Exception {
         StreamExecutionEnvironment env = StreamExecutionEnvironment.getExecutionEnvironment();
@@ -45,10 +45,11 @@ public class TopNProductTask {
         });
         // 窗口统计点击量，数据集的原因，每一次评分当做一次点击
         DataStream<TopEntity> windowData = timeData.keyBy("productId")
-                .timeWindow(Time.seconds(60), Time.seconds(5))
+                .timeWindow(Time.minutes(60), Time.minutes(1))
                 .aggregate(new AggCount(), new WindowResultFunction());
         DataStream<String> topProducts = windowData.keyBy("windowEnd")
-                .process(new HotProducts(3));
+                .process(new HotProducts(topCount));
+                //存入 hbase  表 "onlineHot", |rowkey||
         topProducts.print();
         env.execute("Hot Product Task");
     }

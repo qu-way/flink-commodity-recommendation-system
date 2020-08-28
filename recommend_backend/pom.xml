@@ -37,6 +37,11 @@
             </exclusions>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
+        </dependency>
+
         <!-- hbase connector-->
         <dependency>
             <groupId>org.apache.hbase</groupId>

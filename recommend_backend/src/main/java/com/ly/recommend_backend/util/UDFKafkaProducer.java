@@ -21,6 +21,5 @@ public class UDFKafkaProducer {
     public static void produce(String msg) {
         ProducerRecord<String, String> record = new ProducerRecord<>(RATING_TOPIC, msg);
         producer.send(record);
-//        producer.close();
     }
 }
