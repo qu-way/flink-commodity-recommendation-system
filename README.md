@@ -1,5 +1,5 @@
 # FlinkCommodityRecommendationSystem
-**Recs**  (基于 Flink 的商品推荐系统) 
+**Recs**  [FlinkCommodityRecommendationSystem(基于 Flink 的商品推荐系统)](https://github.com/MoriatyBug/flink-commodity-recommendation-system)
 
 ## 1. 前言
 系统取名为 `Recs`，灵感源于 `Recommendation System`。logo 使用在线 logo 网站制作。

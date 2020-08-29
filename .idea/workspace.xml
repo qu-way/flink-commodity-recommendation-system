@@ -2,71 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fd1df7d9-a7d5-4a39-8b41-08e1f12b3b46" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/recommendation/src/main/resources/hbase.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation/src/main/resources/startAll.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/recommendation/src/main/resources/stopAll.sh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/.browserslistrc" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/.browserslistrc" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/babel.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/babel.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/postcss.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/postcss.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/public/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/public/favicon.ico" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/public/favicon2.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/public/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/App.vue" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/App.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/ly.png" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/assets/ly.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/assets/user.png" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/assets/user.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld/HelloWorld.stylus" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld/HelloWorld.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld/HelloWorld.vue" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/HelloWorld/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/components/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/router/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/router/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/shims-tsx.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/shims-tsx.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/shims-vue.d.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/shims-vue.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/store/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/store/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Detail/Detail.stylus" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Detail/Detail.stylus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Detail/Detail.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Detail/Detail.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Detail/Detail.vue" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Detail/Detail.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Detail/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Detail/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Header/Header.stylus" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Header/Header.stylus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Header/Header.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Header/Header.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Header/Header.vue" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Header/Header.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Header/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Header/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Home/Home.stylus" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Home/Home.stylus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Home/Home.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Home/Home.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Home/Home.vue" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Home/Home.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Home/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Home/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Login/Login.stylus" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Login/Login.stylus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Login/Login.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Login/Login.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Login/Login.vue" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Login/Login.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Login/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Login/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Search/Search.stylus" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Search/Search.stylus" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Search/Search.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Search/Search.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Search/Search.vue" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Search/Search.vue" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/Search/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/Search/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/src/views/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/src/views/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/tsconfig.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/front/vue.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_front/vue.config.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/mvnw" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/mvnw.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/RecommendBackendApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/RecommendBackendApplication.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/controller/ProductController.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/controller/ProductController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/dao/ProductInterface.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/dao/ProductInterface.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/service/RecommendService.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/service/RecommendService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/Property.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/Property.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/SecurityConfig.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/UDFKafkaProducer.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/UDFKafkaProducer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/main/resources/log4j.properties" beforeDir="false" afterPath="$PROJECT_DIR$/recommend_backend/src/main/resources/log4j.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommend_backend/src/test/java/com/ly/recommend_backend/RecommendBackendApplicationTests.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql" beforeDir="false" afterPath="$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/recommendation/target/" />
     <ignored path="$PROJECT_DIR$/recommend_backend/target/" />
@@ -130,6 +66,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/README.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="26">
+                <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java">
           <provider selected="true" editor-type-id="text-editor">
@@ -153,11 +101,11 @@
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/src/main/resources/stopAll.sh">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="442">
-              <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+              <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
             </state>
           </provider>
         </entry>
@@ -166,7 +114,7 @@
         <entry file="file://$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="520">
-              <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+              <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
             </state>
           </provider>
         </entry>
@@ -178,11 +126,6 @@
       </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/recommendation/src/main/resources/config.properties">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/recommendation/src/main/resources/products.csv">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
@@ -276,7 +219,6 @@
         <option value="$PROJECT_DIR$/recommendation/src/main/java/com/ly/util/HotProducts.java" />
         <option value="$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/TopNProductTask.java" />
         <option value="$PROJECT_DIR$/recommendation/src/main/java/com/ly/client/HbaseClient.java" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/SecurityConfig.java" />
         <option value="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/util/UDFKafkaProducer.java" />
         <option value="$PROJECT_DIR$/recommend_backend/src/main/java/com/ly/recommend_backend/RecommendBackendApplication.java" />
@@ -291,6 +233,7 @@
         <option value="$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql" />
         <option value="$PROJECT_DIR$/recommendation/src/main/java/com/ly/task/OnlineRecommender/UserActionRecommenderTask.java" />
         <option value="$PROJECT_DIR$/recommendation/src/main/resources/hbase.txt" />
+        <option value="$PROJECT_DIR$/README.md" />
       </list>
     </option>
   </component>
@@ -483,15 +426,15 @@
     <property name="ts.external.directory.path" value="D:\SVLY\project\FlinkCommodityRecommendationSystem\recommend_front\node_modules\typescript\lib" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\SVLY\project\FlinkCommodityRecommendationSystem\recommendation\src\main\resources" />
+      <recent name="D:\SVLY\project\FlinkCommodityRecommendationSystem\recommend_backend\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.ly.recommend_backend.entity" />
       <recent name="com.ly.recommend_backend.util" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\SVLY\project\FlinkCommodityRecommendationSystem\recommend_backend\src\main\resources" />
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\SVLY\project\FlinkCommodityRecommendationSystem\recommendation\src\main\resources" />
     </key>
   </component>
@@ -633,12 +576,12 @@
       <workItem from="1598540725118" duration="2820000" />
       <workItem from="1598580642966" duration="12840000" />
       <workItem from="1598599019227" duration="6983000" />
-      <workItem from="1598679853112" duration="5335000" />
+      <workItem from="1598679853112" duration="6108000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220164000" />
+    <option name="totallyTimeSpent" value="220937000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -650,10 +593,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-13" y="278" width="1744" height="1168" extended-state="1" />
+    <frame x="-7" y="-7" width="1742" height="1166" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7860395" visible="true" weight="0.2698695" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.7860395" visible="true" weight="0.27019003" />
       <window_info id="Structure" order="1" sideWeight="0.21396054" side_tool="true" weight="0.24821852" />
       <window_info id="Designer" order="2" />
       <window_info id="UI Designer" order="3" />
@@ -930,16 +873,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-962">
-            <caret line="67" column="15" lean-forward="true" selection-start-line="67" selection-start-column="15" selection-end-line="67" selection-end-column="15" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/recommendation/src/main/java/com/ly/util/HotProducts.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="331">
@@ -1015,7 +948,7 @@
     <entry file="file://$PROJECT_DIR$/recommendation/src/main/resources/mysql.sql">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="520">
-          <caret line="20" column="29" lean-forward="true" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
+          <caret line="20" column="29" selection-start-line="20" selection-start-column="29" selection-end-line="20" selection-end-column="29" />
         </state>
       </provider>
     </entry>
@@ -1045,7 +978,17 @@
     <entry file="file://$PROJECT_DIR$/recommendation/src/main/resources/stopAll.sh">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="442">
-          <caret line="17" column="14" lean-forward="true" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+          <caret line="17" column="14" selection-start-line="17" selection-start-column="14" selection-end-line="17" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="26">
+            <caret line="1" column="33" lean-forward="true" selection-start-line="1" selection-start-column="33" selection-end-line="1" selection-end-column="33" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>
