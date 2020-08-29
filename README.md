@@ -12,7 +12,7 @@
 
 ## 2. 项目简介
 ### 2.1 Recs 系统架构
-![系统架构](images/system_architecture.png)
+![system_architecture.png](https://i.loli.net/2020/08/29/rf934P1B7FqnpmX.png)
 
 
 
@@ -30,7 +30,7 @@
 
 ### 2.2 首页
 
-![首页](./images/index.png)
+![index.png](https://i.loli.net/2020/08/29/FaRlqmxXTLspeg7.png)
 
 共有四个模块：
 
@@ -43,9 +43,7 @@
 
 ### 2.3 商品详情
 
-
-
-![商品详情](./images/product_info.png)
+![product_info.png]( https://i.loli.net/2020/08/29/gjn8xuDzvrMbH2L.png)
 
 - 展示商品详细信息
 
@@ -53,7 +51,7 @@
 
 ### 2.4 登录
 
-![登录](./images/login.png)
+![login.png](https://i.loli.net/2020/08/29/KJyXzIW3jSM1YdU.png)
 
 
 
@@ -112,7 +110,7 @@
 
 **项目架构：**
 
-![](./images/backend.png)
+![backend.png](https://i.loli.net/2020/08/29/5z2i3LNWjaoEpxm.png)
 
 ### 3.3 	前端 (recommend_front)
 
@@ -170,5 +168,6 @@
 - 启动实时推荐任务
 - 离线任务定时启动
 
-
 ###  
+
+**最后，作者正在经历2020秋招，如果您觉得本项目不错，欢迎给个 star!**
