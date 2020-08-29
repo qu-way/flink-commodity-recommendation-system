@@ -40,7 +40,6 @@ public class RecommendService {
 
         for(int i = 1; i <= num; i++) {
             ProductEntity product = getProductEntity(Integer.parseInt(list.get(i).getKey()));
-//            product.setScore(list.get(i).getValue());
             product.setScore(3.5);
             System.out.println(product);
             recommendEntityList.add(product);

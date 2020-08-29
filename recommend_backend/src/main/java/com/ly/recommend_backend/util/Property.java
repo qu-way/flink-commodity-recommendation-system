@@ -16,10 +16,9 @@ public class Property {
             InputStreamReader inputStreamReader = new InputStreamReader(in, "UTF-8");
             contextProperties.load(inputStreamReader);
         } catch (IOException e) {
-            System.err.println(">>>flink-2-hbase<<<资源文件加载失败!");
+            System.err.println("=======================\n" + "配置文件加载失败!" + "=======================");
             e.printStackTrace();
         }
-//        System.out.println(">>>flink-2-hbase<<<资源文件加载成功");
     }
 
     public static String getStrValue(String key) {

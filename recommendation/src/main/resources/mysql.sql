@@ -20,16 +20,16 @@ CREATE TABLE `product`  (
 -- ----------------------------
 -- Table Structure for rating
 -- ----------------------------
-DROP TABLE IF EXISTS `rating`;
-CREATE TABLE `rating`  (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `userId` int(20) NOT NULL,
-  `productId` int(20) NOT NULL,
-  `score` decimal(5, 1) NOT NULL,
-  `timestamp` int(20) NOT NULL,
-  PRIMARY KEY (`id`) USING BTREE,
-  INDEX indexUserId (`userId`)
-) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+# DROP TABLE IF EXISTS `rating`;
+# CREATE TABLE `rating`  (
+#   `id` int(11) NOT NULL AUTO_INCREMENT,
+#   `userId` int(20) NOT NULL,
+#   `productId` int(20) NOT NULL,
+#   `score` decimal(5, 1) NOT NULL,
+#   `timestamp` int(20) NOT NULL,
+#   PRIMARY KEY (`id`) USING BTREE,
+#   INDEX indexUserId (`userId`)
+# ) ENGINE = InnoDB  CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 
 -- ----------------------------

@@ -11,17 +11,7 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @EnableWebSecurity
 public class RecommendBackendApplication {
-
     public static void main(String[] args) {
         SpringApplication.run(RecommendBackendApplication.class, args);
     }
-
-
-    @RequestMapping("/nice")
-    public String sayHello(@RequestParam(value="name" , defaultValue = "world") String name) {
-        return String.format("hello " + name + "!");
-    }
-
-
-
 }

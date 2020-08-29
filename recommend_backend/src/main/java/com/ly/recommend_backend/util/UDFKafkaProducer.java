@@ -7,7 +7,12 @@ import org.apache.kafka.common.serialization.StringSerializer;
 
 import java.util.Properties;
 
+
 public class UDFKafkaProducer {
+
+    /**
+     * Kafka 生产者
+     * */
     private static String RATING_TOPIC = "rating";
     private static KafkaProducer<String, String> producer = null;
     static {

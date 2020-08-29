@@ -33,7 +33,6 @@ public class ProductController {
     /**
     * 热门推荐
     *
-    * @param
     * */
     @RequestMapping(value = "/historyhot", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
@@ -60,7 +59,6 @@ public class ProductController {
 
     /*
     * 优质商品推荐
-    *
     * */
     @RequestMapping(value = "/goodproducts", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
@@ -108,7 +106,6 @@ public class ProductController {
 
     /**
      * 查询单个商品
-     *
      * */
     @RequestMapping(value = "/query/{productId}", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
@@ -175,7 +172,6 @@ public class ProductController {
     /**
      * 实时用户个性化推荐
      * */
-
     @RequestMapping(value="/stream", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
     public ModelMap onlineRecs(@RequestParam("userId") String userId) {
@@ -194,7 +190,6 @@ public class ProductController {
     /**
      * 实时热门推荐
      * */
-
     @RequestMapping(value = "/onlinehot", produces = "application/json", method = RequestMethod.GET)
     @ResponseBody
     public ModelMap onlineHot() {

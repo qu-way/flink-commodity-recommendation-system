@@ -8,7 +8,7 @@
 4. Axios
 5. Vue-Cli 3
 
-如何搭建 Vue + TS 的工程，我这里已有介绍： https://zhuanlan.zhihu.com/p/88816466 
+https://zhuanlan.zhihu.com/p/88816466 
 
 ## 启动 dev 模式
 

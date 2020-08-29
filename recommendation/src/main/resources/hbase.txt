@@ -1,0 +1,10 @@
+// 进入 hbase shell 输入以下命令
+//NAME 的值是列族名称，这里为了方便都取为 'p'
+create 'rating', {NAME => 'p'}
+create 'userProduct', {NAME => 'p'}
+create 'itemCFRecommend', {NAME => 'p'}
+create 'goodProdcuts', {NAME => 'p'}
+create 'historyHotProducts', {NAME => 'p'}
+create 'onlineHotProducts', {NAME => 'p'}
+create 'onlineRecommend', {NAME => 'p'}
+create 'onlineHot', {NAME => 'p'}

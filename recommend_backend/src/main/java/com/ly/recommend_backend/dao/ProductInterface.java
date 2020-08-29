@@ -10,8 +10,6 @@ import java.util.List;
 
 public interface ProductInterface extends JpaRepository<ProductEntity, Integer>, JpaSpecificationExecutor<ProductEntity> {
     ProductEntity getProductByProductId(Integer productid);
-//    List<ProductEntity> getProductEntitiesByName(String name);
-
     @Query("select product from ProductEntity product where product.name like CONCAT('%', :name, '%')")
     List<ProductEntity> findByNameLike(@Param("name") String name);
 }
